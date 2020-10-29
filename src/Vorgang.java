@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class Vorgang {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String input = "";
+        String input;
+
         int counter = 0;
         String[] stati = {"n", "b", "s", "a", "t", "x"};
         String[] statiDefinition = {
@@ -15,7 +16,7 @@ public class Vorgang {
                 "Beenden"
         };
 
-        while (!input.equals("x")) {
+        do {
             System.out.println("Status eingeben: ");
 
             input = sc.next().toLowerCase();
@@ -36,6 +37,7 @@ public class Vorgang {
                     counter++;
                 }
             }
-        }
+        } while (!input.equals("x"));
+
     }
 }
